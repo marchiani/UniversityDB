@@ -1,8 +1,14 @@
-# Это Херня ребята выучите MarkDown тогда и поговорим
-### Теперь документацию пишите на MarkDown
+# Это Херня ребята, выучите MarkDown тогда и поговорим
+### Теперь документацию пишем на MarkDown
 Вот ссылка на туториал [MarkDown Like HTML better he easer then HTML ](https://paulradzkov.com/2014/markdown_cheatsheet/)
-А компилировать свои md файлы будете на своих репозитория потому что git компилирует maekdown,
+
+### Где компилировать?
+А компилировать свои md файлы будете на своих репозитория потому что git компилирует markdown,
 а этот файл md он будет общий(основная документация) но работать в нем буду только я(конечно вы сможете мне подсказать как сделать лучше)
+
+### В каком редакторе писать на markdown?
+Лично я пишу в Atom вот ссылка на [туториал о Атоме](http://blog.harrix.org/article/6076) но там внизу есть плагины для работы с markdown(можете использовать любой другой редактор)
+
 
 ### Домашка
 Да я не в праве вам ее задавать но если если вы хотите знать MD то повторите код которы ниже
@@ -28,12 +34,12 @@
 
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjLhpi6-QunJzbpYq1OkcPsyQkJx0CP6U4ZBPCHxb_58DNP2u)
 
-![](//Imagination.jpg)
 
-''' <div style="color:red;"><h3> Try write something in HTML, It's HTML code</h3> </div> '''
+<div style="color:red;"><h3> Try write something in HTML, It's HTML code</h3> </div>
 
-> <div style="color:red;"><h3> Try write something in HTML, It's HTML code</h3> </div>
-** Bolt **
+**Bolt**
+
+*Kyiv*
 
 ~cross out~
 
