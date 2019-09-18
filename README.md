@@ -24,7 +24,7 @@
 > 1. Item1
 > 2. Item2
 > 3. Item3
- 
+
 
 1. Item1
     * PodItem1
@@ -34,22 +34,20 @@
    2. PodItem1
 
 
- 
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjLhpi6-QunJzbpYq1OkcPsyQkJx0CP6U4ZBPCHxb_58DNP2u)
 
 
- 
- 
 <div style="color:red;"><h3> Try write something in HTML, It's HTML code</h3> </div>
  
 **Bolt**
- 
+
 *Kyiv*
- 
+
+_Database_
+
 ~cross out~
- 
+
 ## SomeLine
 ***
- 
- 
+
 ## Если не смогли сделать задавайте вопросы
