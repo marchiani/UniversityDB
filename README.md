@@ -39,7 +39,9 @@
 
 <div style="color:red;"><h3> Try write something in HTML, It's HTML code</h3> </div>
  
-**Bolt**
+<b>Bolt</b>
+
+__Bocland__
 
 *Kyiv*
 
