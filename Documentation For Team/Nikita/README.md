@@ -1,11 +1,11 @@
 # Основы UML Class Diagram
 ---
-##### Я хочу разобраться, но с чего мне начать?
+#### Я хочу разобраться, но с чего мне начать?
 1) Чтобы понять, что такое UML, жмякаете [сюда](https://ru.wikipedia.org/wiki/UML).
 2) Чтобы понять, как использовать UML Class Diagram, смотрите это [видео](https://www.youtube.com/watch?v=UI6lqHOVHic) (есть субтитры на украинском языке).
 3) Я для построение диаграммы использовал данный [сайт](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000).
 4) Вот [туториал](http://plantuml.com/ru/class-diagram) по построению диаграмм на данном ресурсе.
-##### Для закрепления материала я рекомендую построить диаграммы из видео. Если вы всё сделали правильно, у вас должно получиться, как у меня.
+#### Для закрепления материала я рекомендую построить диаграммы из видео. Если вы всё сделали правильно, у вас должно получиться, как у меня.
 1) Пример с Animal
 
 ![Class Diagram](http://www.plantuml.com/plantuml/png/JL3DQlD03BphANJyFegXPzD3Ga-5q1xIFe3Y25l4rWP9mT2VTw_eniQddHdcPz7EWonkqmX-4RsIqOJTIExx29FJBVYbAtgKJyP7e9E7KHVLWNkLYKRy0coK9cxHCw9zKZctA1g9gES5pYpz47Vsu1ol6VhtFp5JvFi3K7lVYqKHvuM_HR3zpSo3-8NjmDh7K9lMr74iyw6OEC3zOq_VJREMRSNQk5KswQMEwSEwGHJgV7fM2LjaYjNwRCnNM8QmfBLAEzPpdlON)
