@@ -1,26 +1,15 @@
-# Відкриті дані
-***
-***Відкриті дані*** - це концепція, за якою певні дані мають бути вільними для використання та розповсюдження будь-якою особою, за умов дотримання правил атрибуції share-alike ліцензії.
+# Основы UML Class Diagram
+---
+##### Я хочу разобраться, но с чего мне начать?
+1) Чтобы понять, что такое UML, жмякаете [сюда](https://ru.wikipedia.org/wiki/UML).
+2) Чтобы понять, как использовать UML Class Diagram, смотрите это [видео](https://www.youtube.com/watch?v=UI6lqHOVHic) (есть субтитры на украинском языке).
+3) Я для построение диаграммы использовал данный [сайт](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000).
+4) Вот [туториал](http://plantuml.com/ru/class-diagram) по построению диаграмм на данном ресурсе.
+##### Для закрепления материала я рекомендую построить диаграммы из видео. Если вы всё сделали правильно, у вас должно получиться, как у меня.
+1) Пример с Animal
 
-Концепція відкритості даних загалом не нова, але її активне поширення почалось з розвитком інформаційних технологій та Інтернету.
+![Class Diagram](http://www.plantuml.com/plantuml/png/JL3DQlD03BphANJyFegXPzD3Ga-5q1xIFe3Y25l4rWP9mT2VTw_eniQddHdcPz7EWonkqmX-4RsIqOJTIExx29FJBVYbAtgKJyP7e9E7KHVLWNkLYKRy0coK9cxHCw9zKZctA1g9gES5pYpz47Vsu1ol6VhtFp5JvFi3K7lVYqKHvuM_HR3zpSo3-8NjmDh7K9lMr74iyw6OEC3zOq_VJREMRSNQk5KswQMEwSEwGHJgV7fM2LjaYjNwRCnNM8QmfBLAEzPpdlON)
 
-Cеред множини відкритих даних окрема увага приділяється відкритим державним даним, як інструменту оцінки та контролю роботи влади та держави, що входить до моделі електронного уряду.
-***
-В багатьох країнах світу розвиток відкритих державних даних підтримується на державному рівні досить давно. І цей процес включає створення відповідної законодавчої бази, виконавчих органів та інформаційних ресурсів.
+2) Пример с Visitor Center
 
-## США
-![США](https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg)
-
-У США цілеспрямований розвиток області відкритих державних даних почався у 2009 році зі створення ресурсу [Data.gov](https://uk.wikipedia.org/wiki/Data.gov) та оприлюднення Директиви Відкритого Уряду США. В свою чергу, ці ініціативи були продовженням політики розбудови [електронного уряду](https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D0%B9_%D1%83%D1%80%D1%8F%D0%B4) США, що впроваджується з 2002 року.
-
-## Європейський союз
-![Європейський союз](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1024px-Flag_of_Europe.svg.png)
-
-В Європі, разом із національними, існує багато загальноєвропейських програм підтримки та розвитку відкритих даних і відповідних ресурсів, що фінансуються за рахунок коштів ЄС. Тут можна згадати проекти DOPA, що розвивається в рамках програми [Seventh Framework Programme](https://cordis.europa.eu/fp7/home_en.html) [Європейської комісії](https://uk.wikipedia.org/wiki/%D0%84%D0%B2%D1%80%D0%BE%D0%BF%D0%B5%D0%B9%D1%81%D1%8C%D0%BA%D0%B0_%D0%BA%D0%BE%D0%BC%D1%96%D1%81%D1%96%D1%8F).
-
-## Росія
-![Росія](https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg)
-
-Щодо країн СНД та України, зокрема, то найбільшу активність в даному напрямі демонструє Росія.
-
-Так влітку 2013 року був прийнятий [федеральний закон № 112-ФЗ](https://web.archive.org/web/20140804152026/http://xn--d1abbgf6aiiy.xn--p1ai/%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B/18302), що вводить поняття відкритих даних та визначає порядок їх оприлюднення на державних ресурсах.
+![Class Diagram](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8paaiBdOiAIdAJ2ejIVLCpiyBpgnALJ3W0aieX6KMPvRa5pcdvfMa5a75VFAJaYgXRAV4aeoY_FnSBYuKbGfQkheGTGfM2eQOSd1z86azFIqkXzIy5A330000)
