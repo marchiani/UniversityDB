@@ -1,0 +1,104 @@
+﻿@model IEnumerable<MemLand.Models.FunnyImages.Mem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="/Scripts/jquery-3.3.1.min.js"/>
+<style>
+    .memImg {
+        height: 200px;
+        width: 300px;
+    }
+    .description {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 18px;
+        
+    }
+    li {
+        list-style-type: none; /* Убираем маркеры */
+    }
+    ul {
+        margin-left: 0; /* Отступ слева в браузере IE и Opera */
+        padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    }
+    .like {
+
+    }
+    .memlink {
+
+    }
+    .Category {
+
+    }
+    .iconsLike {
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .iconsLike:hover {
+        color: rgba(0,0,0,0.6)
+    }
+    .Title {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 22px;
+    }
+    .likebutton {
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+    }
+</style>
+<div class="container-fluid">
+    <ul class="row">
+        @{
+            int countList = 0;
+        }
+        @foreach (var i in Model)
+        {
+
+            <li class="col-lg-2 col-md-3 col-md-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                <img src="@i.PathImg" class="memImg" />
+                <div class="Category">
+                    @i.Category
+                </div>
+                <div class=" text-center Title">
+                    @i.Title
+                </div>
+                <div class="description text-center">
+                    @i.ShortDescription
+                </div>
+
+                @using (Ajax.BeginForm("CountLike", new AjaxOptions { UpdateTargetId = "result" }))
+                {
+                    <span class="pull-left">
+                        <input type="hidden" name="numberid" value="@i.Id" />
+                        <button type="submit" class="likebutton" onmouseover="Like1(@countList)" onmouseout="Like2(@countList)">
+                            <i class="far fa-thumbs-up iconsLike" id=""></i>
+                        </button>
+
+                    </span>
+                }
+
+                <span id="result">
+                    @i.Like
+                </span>
+
+            </li>
+            countList++;
+        }
+    </ul>
+</div>
+<script>
+    function Like1(ccc) {
+        const likebtn2 = document.querySelectorAll(".iconsLike");
+        likebtn2[ccc].classList.remove("far");
+        likebtn2[ccc].classList.add("fas");
+    }
+    function Like2(ddd) {
+        const likebtn1 = document.querySelectorAll(".iconsLike");
+        likebtn1[ddd].classList.remove("fas");
+        likebtn1[ddd].classList.add("far");
+    }
+
+</script>

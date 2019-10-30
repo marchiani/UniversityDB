@@ -1,0 +1,59 @@
+﻿@using System.Diagnostics.Eventing.Reader
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/fontawesome-free-5.11.2-web/css/all.css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/jquery-3.3.1.js")
+
+</head>
+<body>
+    <div class="container-fluid navbar navbar-inverse navbar-fixed-top">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                @Html.ActionLink("MemLand", "Index", "Mem", new { area = "" }, new { @class = "navbar-brand col-lg-1 col-md-1 col-sm-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1" })
+            </div>
+            <div class="navbar-collapse collapse  col-lg-2 col-lg-offset-9 col-md-offset-8 col-md-offset-6">
+                <ul class="nav navbar-nav ">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink(@User.Identity.Name, "Index", "Mem")</li>
+
+                        <li>@Html.ActionLink("Add mem", "AddMem", "Mem")</li>
+                        
+                        <li>@Html.ActionLink("Log out", "Logoff", "Account")</li>
+
+                    }
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Log in", "Login", "Account")</li>
+                        <li>@Html.ActionLink("Registration", "Register", "Account")</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Scripts/jquery-3.3.1.js")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
