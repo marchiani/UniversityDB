@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Common.CommandTrees;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -31,18 +32,10 @@ namespace MemLand.Controllers
             return View(db.Mems.Where(u => u.PostMem == false).ToList());
         }
 
-        //[Authorize]
-        //[HttpPost]
-        //public ActionResult PostOrNoMem(int numberMem)
-        //{
-        //    db.Mems.Where(i => i.Id == numberMem).FirstOrDefault().PostMem = true;
-        //    db.SaveChanges();
-        //    return RedirectToAction("PostOrNoMem");
-        //}
 
         [HttpPost]
         [Authorize]
-        public ActionResult CountLike(int numberid)
+        public ActionResult Index(int numberid)
         {
             db.Mems.Where(i => i.Id == numberid).FirstOrDefault().Like = db.Mems.Where(i => i.Id == numberid).FirstOrDefault().Like + 1;
             db.SaveChanges();
@@ -88,8 +81,8 @@ namespace MemLand.Controllers
         {
             var delete = db.Mems.Where(u => u.Id == id).FirstOrDefault();
             db.Mems.Remove(delete);
+            db.SaveChanges();
             return RedirectToAction("PostOrNoMem");
         }
-
     }
 }

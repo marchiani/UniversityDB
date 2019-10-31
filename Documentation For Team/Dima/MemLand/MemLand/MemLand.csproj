@@ -1832,6 +1832,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -1854,6 +1856,9 @@
     <Content Include="Views\Mem\About.cshtml" />
     <Content Include="Views\Mem\AddMem.cshtml" />
     <Content Include="Views\Mem\PostOrNoMem.cshtml" />
+    <Content Include="Views\Account\DeleteUser.cshtml" />
+    <Content Include="Views\Account\DeleteUsers.cshtml" />
+    <Content Include="Views\Mem\CountLike.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201910290747130_InitialModelAddUsers.resx">

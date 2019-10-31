@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Web.UI;
 using MemLand.Models;
 using MemLand.Models.Account;
 using Login = System.Web.UI.WebControls.Login;
@@ -104,6 +106,28 @@ namespace MemLand.Controllers
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Mem");
+        }
+        [HttpGet]
+        [Authorize]
+        public ActionResult DeleteUser(int? id )
+        {
+            if (id != null && db.Users.Where(u => u.Email == User.Identity.Name).FirstOrDefault().RoleId > db.Users.Where(u => u.Id == id).FirstOrDefault().RoleId)
+            { 
+                db.Users.Remove(db.Users.Where(u => u.Id == id).FirstOrDefault());
+                db.SaveChanges();
+                return RedirectToAction("Index","Mem");
+            }else if(id != null && db.Users.Where(u => u.Email == User.Identity.Name).FirstOrDefault().RoleId < db.Users.Where(u => u.Id == id).FirstOrDefault().RoleId)
+            {
+                return new HttpStatusCodeResult(403);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DeleteUsers(User user)
+        {
+            
+            return PartialView(db.Users.Where(u => u.Email == user.Email).FirstOrDefault());
         }
     }
 }

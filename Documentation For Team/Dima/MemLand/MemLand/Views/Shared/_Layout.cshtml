@@ -9,10 +9,16 @@
     @Styles.Render("~/Content/fontawesome-free-5.11.2-web/css/all.css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/Scripts/jquery-3.3.1.js")
-
+    @Scripts.Render("~/Scripts/jquery.validate.js")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.js")
+    <style>
+        .bndt:hover {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <div class="container-fluid navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid navbar navbar-default navbar-fixed-top bg-primary" style="box-shadow: 0 0 10px rgba(0,0,0,0.6);">
         <div class="row">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,14 +27,23 @@
                     <span class="icon-bar"></span>
                 </button>
                 
-                @Html.ActionLink("MemLand", "Index", "Mem", new { area = "" }, new { @class = "navbar-brand col-lg-1 col-md-1 col-sm-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1" })
+                @Html.ActionLink("MemLand", "Index", "Mem", new { area = "" }, new { @class = "navbar-brand col-lg-1 col-md-1 col-sm-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 bndt" })
             </div>
-            <div class="navbar-collapse collapse  col-lg-2 col-lg-offset-9 col-md-offset-8 col-md-offset-6">
+            <div class="navbar-collapse collapse  col-lg-3 col-lg-offset-8 col-md-offset-8 col-md-offset-6">
                 <ul class="nav navbar-nav ">
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink(@User.Identity.Name, "Index", "Mem")</li>
-
+                        if (User.IsInRole("manager"))
+                        {
+                            <li>@Html.ActionLink("Delete user","DeleteUser","Account")</li>
+                            <li>@Html.ActionLink("Mem for confirmation","PostOrNoMem", "Mem")</li>
+                        }
+                        
+                        if (User.IsInRole("admin"))
+                        {
+                            <li>@Html.ActionLink("Delete user and manager","DeleteUser","Account")</li>
+                        }
                         <li>@Html.ActionLink("Add mem", "AddMem", "Mem")</li>
                         
                         <li>@Html.ActionLink("Log out", "Logoff", "Account")</li>

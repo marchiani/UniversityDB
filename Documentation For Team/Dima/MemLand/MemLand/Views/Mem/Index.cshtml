@@ -10,6 +10,7 @@
         width: 300px;
     }
     .description {
+        margin-top: 5px;
         color: rgba(0, 0, 0, 0.6);
         font-size: 18px;
         
@@ -20,6 +21,10 @@
     ul {
         margin-left: 0; /* Отступ слева в браузере IE и Opera */
         padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    }
+    .listoc {
+        margin-top: 40px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.2);
     }
     .like {
 
@@ -38,8 +43,9 @@
         color: rgba(0,0,0,0.6)
     }
     .Title {
+        margin-top: 10px;
         color: rgba(0, 0, 0, 0.8);
-        font-size: 22px;
+        font-size: 24px;
     }
     .likebutton {
         padding: 0;
@@ -57,33 +63,29 @@
         @foreach (var i in Model)
         {
 
-            <li class="col-lg-2 col-md-3 col-md-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-                <img src="@i.PathImg" class="memImg" />
-                <div class="Category">
-                    @i.Category
-                </div>
-                <div class=" text-center Title">
-                    @i.Title
-                </div>
-                <div class="description text-center">
-                    @i.ShortDescription
-                </div>
-
-                @using (Ajax.BeginForm("CountLike", new AjaxOptions { UpdateTargetId = "result" }))
+        <li class="col-lg-2 col-md-3 col-md-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 listoc">
+            <img src="@i.PathImg" class="memImg img-responsive" style=" display: block; padding-top: 20px;" />
+            @*<div class="Category">
+            @i.Category
+        </div>*@
+            <div class=" text-center Title">
+                @i.Title
+            </div>
+            <div class="description text-center">
+                @i.ShortDescription
+            </div>
+            <div class=" text-center">
+                @using (Html.BeginForm())
                 {
-                    <span class="pull-left">
-                        <input type="hidden" name="numberid" value="@i.Id" />
-                        <button type="submit" class="likebutton" onmouseover="Like1(@countList)" onmouseout="Like2(@countList)">
-                            <i class="far fa-thumbs-up iconsLike" id=""></i>
-                        </button>
-
-                    </span>
+                    <input type="hidden" name="numberid" value="@i.Id" />
+                    <button type="submit" class="likebutton" onmouseover="Like1(@countList)" onmouseout="Like2(@countList)">
+                        <i class="far fa-thumbs-up iconsLike " id=""></i>
+                    </button>
                 }
-
-                <span id="result">
+                <span id="result" >
                     @i.Like
                 </span>
-
+            </div>
             </li>
             countList++;
         }

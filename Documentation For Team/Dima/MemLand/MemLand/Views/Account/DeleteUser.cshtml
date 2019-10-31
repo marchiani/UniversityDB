@@ -1,0 +1,20 @@
+﻿@model MemLand.Models.Account.User
+@{
+    ViewBag.Title = "DeleteUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid ">
+    <div class="row">
+        @using (Ajax.BeginForm("DeleteUsers", new AjaxOptions { UpdateTargetId = "ResultUser" }))
+        {
+            <div class="col-lg-2 col-sm-4 col-md-3 col-lg-offset-5 col-sm-offset-5 col-md-offset-8 " style="margin-top: 100px;">
+                @Html.TextBoxFor(madel => Model.Email, new { @class = "form-control", placeholder = "Name user" })
+                <br />
+                <button type="submit" class="btn btn-info">Search</button>
+            </div>
+        }
+    </div>
+    
+    <div class="row col-lg-2 col-sm-4 col-md-3 col-lg-offset-5 col-sm-offset-5 col-md-offset-8" id="ResultUser" style="margin-top: 50px;"></div>
+</div>
